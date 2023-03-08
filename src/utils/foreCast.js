@@ -19,7 +19,7 @@ const foreCast=(latitude,longitutde,callback)=>{
             callback(undefined,{
                 temperature: body.current.temperature,
                 precipitation: body.current.precip,
-                location: body.location.name
+                location: body.location.name+', ' + body.location.region+ ', ' +body.location.country
             })
         }
     })

@@ -19,7 +19,8 @@ weatherForm.addEventListener('submit',(e)=>{
                 m1.textContent=data.error
             }
             else{
-                m1.textContent=data['address'].substr(1,(data['address'].length-2))
+                // m1.textContent=data['address'].substr(1,(data['address'].length-2))
+                m1.textContent=data['foreCast']['location']
                 m2.textContent='It is currently '+ data['foreCast']['temperature'] + ' degrees out. There is '+ data['foreCast']['precipitation'] + '% chance of rain.'
             }
         })
